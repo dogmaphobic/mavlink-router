@@ -4,10 +4,6 @@ project(mavlink-routerd)
 
 execute_process(COMMAND git --git-dir ${CMAKE_CURRENT_SOURCE_DIR}/.git rev-list master --first-parent --count OUTPUT_VARIABLE BUILD_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/modules/mavlink/ardupilotmega")
-    execute_process(COMMAND git submodule update --init --recursive)
-endif()
-
 add_definitions(
     -Wall
     -Wextra
