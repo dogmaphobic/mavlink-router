@@ -21,7 +21,7 @@ add_executable(${PROJECT_NAME}
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/modules/mavlink/ardupilotmega
+    ${CMAKE_CURRENT_SOURCE_DIR}/modules/v2/ardupilotmega
 )
 
 target_compile_options(${PROJECT_NAME} PUBLIC
