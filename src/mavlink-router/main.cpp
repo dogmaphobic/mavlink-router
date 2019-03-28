@@ -693,7 +693,7 @@ static int parse_confs(ConfFile &conf)
     pattern = "uartendpoint *";
     offset = strlen(pattern) - 1;
     while (conf.get_sections(pattern, &iter) == 0) {
-        struct option_uart opt_uart = {nullptr, nullptr};
+        struct option_uart opt_uart = {};
         ret = conf.extract_options(&iter, option_table_uart, ARRAY_SIZE(option_table_uart),
                                    &opt_uart);
         if (ret == 0)

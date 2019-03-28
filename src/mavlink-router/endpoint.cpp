@@ -561,6 +561,8 @@ fail:
 
 bool UartEndpoint::_change_baud_cb(void *data)
 {
+    (void)data;
+    
     _current_baud_idx = (_current_baud_idx + 1) % _baudrates.size();
 
     log_info("Retrying UART [%d] on new baudrate: %lu", fd, _baudrates[_current_baud_idx]);

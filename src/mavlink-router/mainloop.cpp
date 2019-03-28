@@ -37,6 +37,7 @@ bool Mainloop::_initialized = false;
 
 static void exit_signal_handler(int signum)
 {
+    (void)signum;
     should_exit = true;
 }
 
@@ -318,6 +319,7 @@ void Mainloop::loop()
 
 bool Mainloop::_log_aggregate_timeout(void *data)
 {
+    (void)data;
     if (_errors_aggregate.msg_to_unknown > 0) {
         log_warning("%u messages to unknown endpoints in the last %d seconds",
                     _errors_aggregate.msg_to_unknown, LOG_AGGREGATE_INTERVAL_SEC);
